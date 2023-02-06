@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barras</title>
+</head>
+<body>
+
+    <canvas width="600" height="400">
+    </canvas>
+
+    <script>
+        
+        let colores = ["blue","green","yellow", "red","gray"];
+        let serie2009 = [6, 47, 41, 3, 3];
+        let serie2019 = [81, 9, 3, 3, 4];
+
+        function dibujarRectangulo(x, y, base, altura, color) {
+            let pantalla = document.querySelector("canvas");
+            let pincel = pantalla.getContext("2d");
+    
+            pincel.fillStyle=color;
+            pincel.fillRect(x,y, base, altura);
+            pincel.strokeStyle="black";
+            pincel.strokeRect(x,y, base, altura);
+        }
+    
+        function escribirTexto(x , y, texto) {
+            let pantalla = document.querySelector("canvas");
+            let pincel = pantalla.getContext("2d");
+    
+            pincel.font="15px Georgia";
+            pincel.fillStyle="black";
+            pincel.fillText(texto, x, y);    
+        }
+        
+        let dibujarBarra = (x,y,serie,color,texto) => {
+
+            let sumaAltura = 0;
+            for (i = 0; i < color.length; i++){
+                let altura = serie[i];
+                dibujarRectangulo(x,y + sumaAltura,50,altura,color[i]);
+                sumaAltura = sumaAltura + altura;
+            }
+
+            escribirTexto(x+5,y+120,texto);
+            
+        }
+
+        dibujarBarra(50,50,serie2009,colores,"2009");
+        dibujarBarra(150,50,serie2019,colores,"2019");
+    </script>
+</body>
+</html>
