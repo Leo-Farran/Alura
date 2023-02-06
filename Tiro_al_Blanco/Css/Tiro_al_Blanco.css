@@ -1,0 +1,29 @@
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-size: cover;
+    background-image: linear-gradient(to bottom right, rgb(231, 139, 231)40%, rgb(81, 56, 192));
+    background-repeat: no-repeat;
+    
+}
+
+h1, h3{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.acertaste{
+    visibility: hidden;
+}
+
+.acertaste.active{
+    visibility: visible;
+}
+
+canvas {
+    width: 100%;
+    object-fit: contain;
+}
+

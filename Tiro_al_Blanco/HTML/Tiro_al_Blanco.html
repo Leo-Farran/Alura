@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiro al Blanco</title>   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/Tiro_al_Blanco.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-center">
+                <h1 class="mt-4">
+                    TIRO AL BLANCO
+                </h1>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <h3 class="text-black-50">
+                    Afina la puntería y trata de acertar!
+                </h3>
+            </div>
+            
+            <div class="acertaste" id="acertaste">
+                <h1 class="d-flex justify-content-center text-danger pt-4">ACERTASTE!</h1>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3">
+                <div class="border border-dark canvas">
+                    <canvas width="600" height="400"> </canvas>
+                </div>
+            </div>                           
+        </div> 
+        <script src="../JS/Tiro_al_Blanco.js"></script>       
+    </div>
+    
+</body>
+
+</html>
